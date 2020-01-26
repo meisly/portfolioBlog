@@ -54,7 +54,7 @@ color:
       k: '#2b2826'
     black: '#000000'
   brand:
-    primary: &color-brand-primary '#709425'
+    primary: &color-brand-primary '#711e8f'
     primaryActive: '#709425'
     light: '#709425'
     lightActive: '#709425'
@@ -93,13 +93,14 @@ time:
   duration:
     default: 0.5s
     long: 1s
+    exlong: 2s
 
 
 # GENERAL TOKENS
 background:
   color:
     primary: *color-white
-    alt: *color-gray-1
+    alt: #00bcf7
     brand: *color-brand-primary
 text:
   family: *font-family-target
@@ -133,7 +134,7 @@ icon:
 # COMPONENT TOKENS
 hero:
   h1:
-    size: *font-size-xxl
+    size: *font-size-l
     color: *color-white
     lineHeight: *font-line-height-xs
   background: 'linear-gradient(0deg, #E0306E, #6438B5)'

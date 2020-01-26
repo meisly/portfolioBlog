@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import "typeface-open-sans";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
@@ -164,7 +165,7 @@ class Layout extends React.Component {
                       }
                       a {
                         text-decoration: none;
-                        color: #666;
+                        color: #00bcf7;
                       }
                       main {
                         width: auto;

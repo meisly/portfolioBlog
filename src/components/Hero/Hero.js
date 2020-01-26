@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
-import { FaArrowDown } from "react-icons/fa/";
+import { IoIosArrowDown } from "react-icons/io/";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
@@ -10,10 +11,10 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
+          {props.children}
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
+          <IoIosArrowDown />
         </button>
       </section>
 
@@ -28,7 +29,7 @@ const Hero = props => {
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 80vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
@@ -64,11 +65,13 @@ const Hero = props => {
           border: 0;
           border-radius: 50%;
           font-size: ${theme.font.size.m};
-          padding: ${theme.space.s} ${theme.space.m};
+          padding: ${theme.space.s} ${theme.space.s};
           cursor: pointer;
           width: ${theme.space.xl};
           height: ${theme.space.xl};
-
+          // padding: 8.5px;
+          position: absolute;
+          bottom: 14%;
           &:focus {
             outline-style: none;
             background: ${theme.color.brand.primary.active};
@@ -80,7 +83,7 @@ const Hero = props => {
             fill: ${theme.color.neutral.white};
             stroke-width: 40;
             stroke: ${theme.color.neutral.white};
-            animation-duration: ${theme.time.duration.long};
+            animation-duration: ${theme.time.duration.exlong};
             animation-name: buttonIconMove;
             animation-iteration-count: infinite;
           }

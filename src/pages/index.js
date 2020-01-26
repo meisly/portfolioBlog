@@ -1,6 +1,7 @@
+/* eslint-disable prettier/prettier */
 import PropTypes from "prop-types";
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { ThemeContext } from "../layouts";
 import Blog from "../components/Blog";
 import Hero from "../components/Hero";
@@ -42,7 +43,9 @@ class IndexPage extends React.Component {
       <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
-            <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme}>
+              I used to be biologist but now I'm interested in a different kind of code.  Check out my blog below or hop to my <Link to=" / portfolio / ">portfolio </Link>to see some of the projects I've worked on along the way.
+            </Hero>
           )}
         </ThemeContext.Consumer>
 
