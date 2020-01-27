@@ -61,6 +61,7 @@ const Hero = props => {
         }
 
         button {
+          z-index: 3;
           background: ${theme.background.color.brand};
           border: 0;
           border-radius: 50%;

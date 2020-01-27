@@ -7,6 +7,8 @@ import Hero from "../components/Hero";
 import Seo from "../components/Seo";
 import { Card } from "antd";
 import tree from "../images/png/professional-development-tree.png";
+import longTree from "../images/png/professional-development-tree-long.png";
+import bluebg1 from "../images/jpg/option4.jpg";
 import Gallery from "../components/Gallery";
 
 class IndexPage extends React.Component {
@@ -52,18 +54,40 @@ class IndexPage extends React.Component {
                 </ThemeContext.Consumer>
 
 
+                <ThemeContext.Consumer>
+                    {theme => (
+                        <React.Fragment theme={theme}>
 
-                <div className="madSkillz">
-                </div>
-                <div className="skillBlurb">
-                    <h2>
-                        I love using code to solve problems
-                    </h2>
-                </div>
-                <div className="projectsContainer">
-                    <Gallery />
-   
-                </div>
+                            <div className="skillBlurb">
+                                <section className="skillBlurb_text">
+                                    <h3>
+                                        Stuff
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            things
+                                        </li>
+                                        <li>
+                                            things
+                                        </li>
+                                        <li>
+                                            things
+                                        </li>
+                                        <li>
+                                            things
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div className="madSkillz">
+                            </div>
+                                <Gallery className="projectsContainer" theme={theme}/>
+                        </React.Fragment>
+
+                    )}
+
+                </ThemeContext.Consumer>
+
                 <Seo facebook={facebook} />
 
                 <style jsx>{`
@@ -74,23 +98,51 @@ class IndexPage extends React.Component {
                     .projectsContainer {
                         position: relative;
                         top: 90vh;
+                        max-width: 100vw;
                     }
                     .skillBlurb {
                         position: relative;
                         right: 0;
                         float: right;
+                        width: 100vw;
+                        height: 90vh;
+                        margin: auto;
+                        background-image: url(${bluebg1});
+                        background-size: cover;
+                    }
+                    .skillBlurb_text {
                         width: 30%;
+                        float: right;
                         margin: 20px;
+                        background: #58595bc4;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
                     }
                     .madSkillz {
+                        position: absolute;
+                        top: 70%;
                         height: 100vh;
                         width: 100vw;
                         background-image: url(${tree});
                         background-size: contain;
                         background-repeat: no-repeat;
-                        position: absolute;
-                        top: 68%;
-                        left: -15%;
+                        background-position: top left -105%;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        .skillBlurb {
+                            height: 40vh;
+                        }
+                        .madSkillz {
+                            position: absolute;
+                            top: 85%;
+                            height: 100vh;
+                            width: 100vw;
+                            background-image: url(${longTree});
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: top left -107px;
+                        }
                     }
                 `}</style>
             </React.Fragment >

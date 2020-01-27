@@ -137,11 +137,14 @@ class Layout extends React.Component {
                       *,
                       *:after,
                       *:before {
-                        box-sizing: inherit;
+                        box-sizing: border-box;
                         margin: 0;
                         padding: 0;
+                        max-width: 100vw;
                       }
                       body {
+                        max-width: 100vw;
+                        overflow-x: hidden;
                         font-family: ${this.state.font400loaded
                           ? "'Open Sans', sans-serif;"
                           : "Arial, sans-serif;"};
@@ -170,6 +173,9 @@ class Layout extends React.Component {
                       main {
                         width: auto;
                         display: block;
+                      }
+                      .header nav.menu {
+                        z-index: 3;
                       }
                     `}</style>
                   </React.Fragment>

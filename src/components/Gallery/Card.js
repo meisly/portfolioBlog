@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
@@ -14,12 +15,24 @@ const Card = props => {
           <h3 className="card__title">{item.firstName + " " + item.lastName}</h3>
           <p className="card__subtitle">{item.title}</p>
           <p className="card__text">{item.biography}</p>
-          <div className="card__element card__element--user-img">
+          <div className="card__element card__element--user-img"
+          style={{
+              backgroundColor: '#fff',
+              border: '2px solid #000',
+              borderRadius: '50%',
+              left: '10px',
+              position: 'absolute',
+              top: '-32px',
+              width: '65px',
+            }}>
             {item.avatar && item.avatar.url ? (
-              <img src={item.avatar.url} alt="" />
+              <img src={item.avatar.url} alt="" style={{
+                backgroundColor: 'hsl(35, 92%, 71%)',
+                fill: '#000'
+              }} />
             ) : (
-              <DefaultAvatar />
-            )}
+                <DefaultAvatar />
+              )}
           </div>
         </div>
         <button className="button button--primary github" type="button">
@@ -34,7 +47,7 @@ const Card = props => {
         </button>
       </div>
       {/* --- STYLES --- */}
-      <style jsx global>{`
+      <style jsx>{`
         :root {
           --font-family-primary: Nunito, sans-serif;
           --gradient-1: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
@@ -42,60 +55,6 @@ const Card = props => {
           --gradient-2: linear-gradient(315deg, #8ec5fc 0%, #e0c3fc 100%);
           --gradient-3: linear-gradient(210deg, #74ebd5 0%, #f7e8ad 100%);
         }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          background-color: hsl(50, 12%, 98%);
-          font-family: var(--font-family-primary);
-          font-size: 16px;
-          line-height: 1.425;
-        }
-
-        .layout__wrapper {
-          margin: auto;
-          width: 990px;
-        }
-
-        .section {
-          padding: 40px;
-        }
-
-        .section__title {
-          color: #000000;
-          font-size: 2.15rem;
-          margin: 0;
-          margin-bottom: 2.5rem;
-        }
-
-        .gallery {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-
-        .gallery--grid {
-          display: grid;
-          grid-auto-flow: row dense;
-          grid-gap: 70px;
-          grid-template-columns: repeat(3, 1fr);
-          padding-left: 35px;
-        }
-
-        .gallery__item--highlight {
-          grid-column: span 2;
-        }
-
-        .gallery__item:nth-child(2n) .card::before {
-          background-image: var(--gradient-2);
-        }
-
-        .gallery__item:nth-child(3n) .card::before {
-          background-image: var(--gradient-3);
-        }
-
         .card {
           position: relative;
         }
@@ -187,6 +146,14 @@ const Card = props => {
           transform: translateY(0.25rem);
         }
 
+        @media only screen and (max-width: 600px) {
+          .demo {
+            left: 3rem
+          }
+          .github {
+
+          }
+        }
         .button {
           background-color: #000000;
           border: 1px solid #000000;
