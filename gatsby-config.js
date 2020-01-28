@@ -29,7 +29,6 @@ const queries = [
     }
   }
 ];
-
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
