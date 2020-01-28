@@ -186,7 +186,7 @@ class Header extends React.Component {
                 position: fixed;
                 top: 0;
                 width: 100%;
-                z-index: 1;
+                z-index: 3;
 
                 h1 {
                   margin: ${theme.space.stack.xxs};

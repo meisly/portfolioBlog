@@ -3,7 +3,7 @@ module.exports = {
   shortSiteTitle: "Fledgling", // <title> ending for posts and pages
   siteDescription: "Portfolio/Blog",
   siteUrl: "https://github.com/meisly/TFarris-portfolio",
-  // pathPrefix: "",
+  pathPrefix: "/Bootstrap-portfolio",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 

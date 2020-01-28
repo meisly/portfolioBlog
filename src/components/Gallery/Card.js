@@ -12,9 +12,8 @@ const Card = props => {
     <React.Fragment>
       <div className="card">
         <div className="card__block card__block--main">
-          <h3 className="card__title">{item.firstName + " " + item.lastName}</h3>
-          <p className="card__subtitle">{item.title}</p>
-          <p className="card__text">{item.biography}</p>
+          <h3 className="card__title">{item.title}</h3>
+          <p className="card__text">{item.description}</p>
           <div className="card__element card__element--user-img"
           style={{
               backgroundColor: '#fff',
@@ -36,13 +35,16 @@ const Card = props => {
           </div>
         </div>
         <button className="button button--primary github" type="button">
-          Github
+          <a href={item.github}>Github</a>
         </button>
-        <button className="button button--primary demo" type="button">
-          Demo
-        </button>
+        {item.demo? (<button className="button button--primary demo" type="button">
+          <a href={item.demo}>Demo</a>
+        </button>)
+        :
+        ''}
+        
         <button className="button button--secondary like">
-          <GoHome />
+          <a href="top">{GoHome}</a>
           <span className="button-text">Like</span>
         </button>
       </div>

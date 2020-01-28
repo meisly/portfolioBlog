@@ -23,7 +23,7 @@ class Menu extends React.Component {
     this.items = [
       { to: "/", label: "Home", icon: GoHome },
       ...pages,
-      { to: "/portfolio/", label: "Portfolio"},
+      { to: "/blogPage/", label: "Blog"},
       { to: "/contact/", label: "Contact" }
     ];
 

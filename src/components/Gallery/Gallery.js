@@ -15,32 +15,74 @@ const Gallery = props => {
       {
         avatar: {
           url: null
-        },
-        biography:
-          "Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.",
-        firstName: "Morgan",
-        lastName: "Sweeney",
-        title: "Ant Collector"
+        }, title: 'Darebuddy',
+        description: 'Web application that allows users to track their progress in fitness programs and log workouts from the popular open source fitness content provider Darebee',
+        github: 'https://github.com/meisly/darebuddy',
+        demo: 'https://damp-earth-37383.herokuapp.com/'
+      },
+      {
+        avatar: {
+          url: null
+        }, title: 'Htown Brews',
+        description: 'Users can search and view local beers as a guest or login to add their own ratings. Admin users can also add new beers to the database.',
+        github: 'https://github.com/meisly/Htown-Brews',
+        demo: 'https://powerful-depths-98350.herokuapp.com'
       },
       {
         avatar: {
           url: null
         },
-        biography:
-          "Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.",
-        firstName: "Morgan",
-        lastName: "Sweeney",
-        title: "Ant Collector"
+        title: "The FriendZone",
+        description: 'Users enter their information and complete a short survey. Then their results were compared to others and the most compatible user was returned.',
+        github: 'https://github.com/meisly/theFriendZone',
+        demo: 'https://pure-reaches-64620.herokuapp.com'
+      }, {
+        avatar: {
+          url: null
+        },
+        title: 'Get Out',
+        description: 'Date planning application using information aggregated from multiple sources. Users entered the date, the location and the type of activity they were interested in. These inputs were used to make several API queries and the results are aggregated and returned. The user can then select activities they would like to pursue and add them to their planner.',
+        github: 'https://github.com/AndrewBrooking/Project-1',
+        demo: 'https://andrewbrooking.github.io/Project-1/#'
       },
       {
         avatar: {
           url: null
         },
-        biography:
-          "Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.",
-        firstName: "Morgan",
-        lastName: "Sweeney",
-        title: "Ant Collector"
+        title: 'Bamazon',
+        description: 'A command line application for inventory management with multiple user levels.',
+        github: 'https://github.com/meisly/bamazon',
+        demo: null
+      },
+      {
+        avatar: {
+          url: null
+        },
+        title: 'Eat-da-Burger',
+        description: `Eat-da-Burger allows you to add burgers to a list and then later mark them
+        as devoured. Eat-da-Burger is a web application hosted on Heroku, using the
+        JawsDB MySQL database on the backend. Express.js serves web requests with Handlebars.js as
+        the templating engine.`,
+        github: 'https://github.com/meisly/burgers',
+        demo: 'https://hidden-caverns-60875.herokuapp.com/'
+      },{
+        avatar: {
+          url: null
+        },
+        title: 'RPS Chatbot',
+        description: `I created a simple rock, paper, scissors game that can be played within a
+        chatroom. Games are narrated by a chatbox. The chatroom utilizes a Firebase NoSQL database.`,
+        github: 'https://github.com/meisly/RPS-Multi',
+        demo: 'https://meisly.github.io/RPS-Multi/'
+      },
+      {
+        avatar: {
+          url: null
+        },
+        title: 'Clickit Memory Game',
+        description: 'A challenging memory game built using React and Node',
+        github: 'https://github.com/meisly/clickygame',
+        demo: 'https://meisly.github.io/clickygame/'
       }
     ];
 
@@ -49,9 +91,9 @@ const Gallery = props => {
 
   return (
     <React.Fragment>
-      <section className="section">
-        <h2 className="section__title">{`Projects (${items.length})`}</h2>
-        <div className="gallery gallery--grid">
+      <section className="section" >
+        <h2 className="section__title">{`Projects`}</h2>
+        <div className="gallery gallery--grid" id="portfolio">
           {items &&
             items.map((item, index) => (
               <div

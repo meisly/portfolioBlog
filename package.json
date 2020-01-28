@@ -44,6 +44,7 @@
     "react-instantsearch": "^5.2.2",
     "react-md-spinner": "^0.3.0",
     "react-obfuscate": "^2.1.4",
+    "react-pdf": "^4.1.0",
     "react-share": "^2.2.0",
     "react-visibility-sensor": "^4.1.0",
     "styled-jsx": "^2.2.7",
@@ -58,6 +59,7 @@
   ],
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "devhost": "gatsby develop --host 192.168.0.112",
     "format": "prettier --write 'src/**/*.js'",
@@ -82,6 +84,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
+    "gh-pages": "^2.2.0",
     "json-loader": "^0.5.7",
     "postcss": "^7.0.0",
     "postcss-cli": "^5.0.1",
