@@ -2,9 +2,9 @@ module.exports = {
   siteTitle: "Fledgling - my Dive into the Wonderful World of CS", // <title>
   shortSiteTitle: "Fledgling", // <title> ending for posts and pages
   siteDescription: "Portfolio/Blog",
-  siteUrl: "https://github.com/meisly/TFarris-portfolio",
-  pathPrefix: "/Bootstrap-portfolio",
-  siteImage: "preview.jpg",
+  siteUrl: "https://meisly.github.io/Bootstrap-portfolio/",
+  pathPrefix: "/Bootstrap-portfolio/",
+  siteImage: "avataaar.png",
   siteLanguage: "en",
 
   /* author */

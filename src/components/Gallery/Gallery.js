@@ -18,7 +18,8 @@ const Gallery = props => {
         }, title: 'Darebuddy',
         description: 'Web application that allows users to track their progress in fitness programs and log workouts from the popular open source fitness content provider Darebee',
         github: 'https://github.com/meisly/darebuddy',
-        demo: 'https://damp-earth-37383.herokuapp.com/'
+        demo: 'https://damp-earth-37383.herokuapp.com/',
+        highlighted: false
       },
       {
         avatar: {
@@ -26,7 +27,8 @@ const Gallery = props => {
         }, title: 'Htown Brews',
         description: 'Users can search and view local beers as a guest or login to add their own ratings. Admin users can also add new beers to the database.',
         github: 'https://github.com/meisly/Htown-Brews',
-        demo: 'https://powerful-depths-98350.herokuapp.com'
+        demo: 'https://powerful-depths-98350.herokuapp.com',
+        highlighted: false
       },
       {
         avatar: {
@@ -35,7 +37,8 @@ const Gallery = props => {
         title: "The FriendZone",
         description: 'Users enter their information and complete a short survey. Then their results were compared to others and the most compatible user was returned.',
         github: 'https://github.com/meisly/theFriendZone',
-        demo: 'https://pure-reaches-64620.herokuapp.com'
+        demo: 'https://pure-reaches-64620.herokuapp.com',
+        highlighted: false
       }, {
         avatar: {
           url: null
@@ -43,7 +46,8 @@ const Gallery = props => {
         title: 'Get Out',
         description: 'Date planning application using information aggregated from multiple sources. Users entered the date, the location and the type of activity they were interested in. These inputs were used to make several API queries and the results are aggregated and returned. The user can then select activities they would like to pursue and add them to their planner.',
         github: 'https://github.com/AndrewBrooking/Project-1',
-        demo: 'https://andrewbrooking.github.io/Project-1/#'
+        demo: 'https://andrewbrooking.github.io/Project-1/#',
+        highlighted: false
       },
       {
         avatar: {
@@ -52,7 +56,8 @@ const Gallery = props => {
         title: 'Bamazon',
         description: 'A command line application for inventory management with multiple user levels.',
         github: 'https://github.com/meisly/bamazon',
-        demo: null
+        demo: null,
+        highlighted: false
       },
       {
         avatar: {
@@ -64,8 +69,9 @@ const Gallery = props => {
         JawsDB MySQL database on the backend. Express.js serves web requests with Handlebars.js as
         the templating engine.`,
         github: 'https://github.com/meisly/burgers',
-        demo: 'https://hidden-caverns-60875.herokuapp.com/'
-      },{
+        demo: 'https://hidden-caverns-60875.herokuapp.com/',
+        highlighted: false
+      }, {
         avatar: {
           url: null
         },
@@ -73,7 +79,8 @@ const Gallery = props => {
         description: `I created a simple rock, paper, scissors game that can be played within a
         chatroom. Games are narrated by a chatbox. The chatroom utilizes a Firebase NoSQL database.`,
         github: 'https://github.com/meisly/RPS-Multi',
-        demo: 'https://meisly.github.io/RPS-Multi/'
+        demo: 'https://meisly.github.io/RPS-Multi/',
+        highlighted: false
       },
       {
         avatar: {
@@ -82,7 +89,8 @@ const Gallery = props => {
         title: 'Clickit Memory Game',
         description: 'A challenging memory game built using React and Node',
         github: 'https://github.com/meisly/clickygame',
-        demo: 'https://meisly.github.io/clickygame/'
+        demo: 'https://meisly.github.io/clickygame/',
+        highlighted: false
       }
     ];
 
@@ -96,17 +104,19 @@ const Gallery = props => {
         <div className="gallery gallery--grid" id="portfolio">
           {items &&
             items.map((item, index) => (
-              <div
+              ( index < props.max )? (
+                <div
                 key={Math.random(10000)}
                 className={
-                  item.highlighted || 3 === index % 4
+                  item.highlighted
                     ? "gallery__item gallery__item--highlight"
                     : "gallery__item"
                 }
               >
                 <Card item={item} key={"item-" + index} />
               </div>
-            ))}
+              ) : ''
+          ))}
         </div>
       </section>
       <style jsx>{`
@@ -155,6 +165,7 @@ const Gallery = props => {
         font-size: 2.15rem;
         margin: 0;
         margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
       }
 
       .gallery {

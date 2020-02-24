@@ -59,7 +59,7 @@
   ],
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://github.com/meisly/Bootstrap-portfolio.git",
     "develop": "gatsby develop",
     "devhost": "gatsby develop --host 192.168.0.112",
     "format": "prettier --write 'src/**/*.js'",

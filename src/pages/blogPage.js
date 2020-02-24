@@ -76,10 +76,10 @@ export default BlogPage;
 
 //eslint-disable-next-line no-undef
 export const query = graphql`
-  query IndexQuery {
+  query BlogQuery {
     posts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
-      sort: { fields: [fields___prefix], order: DESC }
+      sort: { fields: [fields___prefix], order: ASC }
     ) {
       edges {
         node {

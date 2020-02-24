@@ -22,8 +22,9 @@ class Menu extends React.Component {
 
     this.items = [
       { to: "/", label: "Home", icon: GoHome },
-      ...pages,
       { to: "/blogPage/", label: "Blog"},
+      { to: "/portfolio/", label: "Portfolio"},
+      { to: "/resume/", label: "Resume"},
       { to: "/contact/", label: "Contact" }
     ];
 

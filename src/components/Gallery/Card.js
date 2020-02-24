@@ -17,21 +17,21 @@ const Card = props => {
           <div className="card__element card__element--user-img"
           style={{
               backgroundColor: '#fff',
-              border: '2px solid #000',
+              border: '0px solid #000',
               borderRadius: '50%',
               left: '10px',
               position: 'absolute',
               top: '-32px',
               width: '65px',
             }}>
-            {item.avatar && item.avatar.url ? (
+            {/* {item.avatar && item.avatar.url ? (
               <img src={item.avatar.url} alt="" style={{
                 backgroundColor: 'hsl(35, 92%, 71%)',
                 fill: '#000'
               }} />
             ) : (
-                <DefaultAvatar />
-              )}
+                ''
+              )} */}
           </div>
         </div>
         <button className="button button--primary github" type="button">
@@ -94,7 +94,7 @@ const Card = props => {
           --size: 65px;
 
           background-color: #fff;
-          border: 2px solid #000;
+          border: 0px solid #000;
           border-radius: 50%;
           left: 10px;
           position: absolute;
@@ -150,10 +150,18 @@ const Card = props => {
 
         @media only screen and (max-width: 600px) {
           .demo {
-            left: 3rem
+            left: 4rem;
           }
           .github {
-
+            right: 1rem;
+          }
+        }
+        @media only screen and (max-width: 1330px) {
+          .demo {
+            left: .5rem;
+          }
+          .github {
+            right: 1.5rem;
           }
         }
         .button {

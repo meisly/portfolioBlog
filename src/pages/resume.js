@@ -6,7 +6,7 @@ import { ThemeContext } from "../layouts";
 import Hero from "../components/Hero";
 import Seo from "../components/Seo";
 
-import resume from "../../content/TFarris_Resume_Jan2019Ex.pdf";
+import resume from "../../content/Resume_Jan2020_BEX.pdf";
 import Pdf from "../components/Pdf"
 
 class Resume extends React.Component {
@@ -50,8 +50,8 @@ class Resume extends React.Component {
 
                     )}
                 </ThemeContext.Consumer>
-
-                <div style={{width: '50%', margin: 'auto'}}>
+                <hr ref={this.separator} />
+                <div className='pdfWindow'>
                     <Pdf></Pdf>
                 </div>
 
@@ -63,6 +63,15 @@ class Resume extends React.Component {
                     hr {
                         margin: 0;
                         border: 0;
+                    }
+                    .pdfWindow {
+                        margin: auto;
+                        width: 50%;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        .pdfWindow {
+                            margin: 0;
+                        }
                     }
                 `}</style>
             </React.Fragment >

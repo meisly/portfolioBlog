@@ -22,9 +22,11 @@ const ContactPage = props => {
         {theme => (
           <Article theme={theme}>
             <header>
-              <Headline title="Contact" theme={theme} />
+              <Headline title="Contact me" theme={theme} />
             </header>
-            <Contact theme={theme} />
+            <h2>Email:<a href="mailto:trafarris@gmail.com"> trafarris@gmail.com</a></h2>
+            <h2>Github:<a href='https://github.com/meisly'> Meisly</a></h2>
+            <h2>LinkedIn:<a href='https://www.linkedin.com/in/t-farris/'> t-farris</a></h2>
           </Article>
         )}
       </ThemeContext.Consumer>

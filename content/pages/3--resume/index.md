@@ -1,6 +1,0 @@
----
-title: Resume
-menuTitle: Resume
----
-
-

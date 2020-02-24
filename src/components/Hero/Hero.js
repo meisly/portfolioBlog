@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-
+import background from "../../images/png/hero-background.png";
 import { IoIosArrowDown } from "react-icons/io/";
 
 const Hero = props => {
@@ -22,8 +22,11 @@ const Hero = props => {
       <style jsx>{`
         .hero {
           align-items: center;
-          background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
+          background: rgb(34,0,130);
+          background: -moz-linear-gradient(0deg, rgba(34,0,130,1) 0%, rgba(127,131,131,1) 100%);
+          background: -webkit-linear-gradient(0deg, rgba(34,0,130,1) 0%, rgba(127,131,131,1) 100%);
+          background: linear-gradient(0deg, rgba(34,0,130,1) 0%, rgba(127,131,131,1) 100%);
+          background-image: url(${background});
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
@@ -31,6 +34,7 @@ const Hero = props => {
           justify-content: center;
           min-height: 80vh;
           height: 100px;
+          min-width: 100vw;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
         }
@@ -72,7 +76,7 @@ const Hero = props => {
           height: ${theme.space.xl};
           // padding: 8.5px;
           position: absolute;
-          bottom: 14%;
+          top: calc(80vh - 40px);
           &:focus {
             outline-style: none;
             background: ${theme.color.brand.primary.active};
@@ -104,7 +108,7 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            background-image: url(${backgrounds.tablet});
+            background-image: url(${background});
           }
 
           h1 {
@@ -119,7 +123,7 @@ const Hero = props => {
 
         @from-width desktop {
           .hero {
-            background-image: url(${backgrounds.desktop});
+            background-image: url(${background});
           }
 
           h1 {

@@ -26,6 +26,7 @@ const Blog = props => {
                     fields: { slug }
                   }
                 } = post;
+                console.log(post.node.fields.prefix)
                 return <Item key={slug} post={node} theme={theme} />;
               })}
             </ul>
@@ -47,12 +48,6 @@ const Blog = props => {
               <Link to="/category">
                 <FaTag />
                 <span>Category</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="2" style={{ listStyleType: 'none' }}>
-              <Link to="/search/">
-                <Icon type="search" />
-                <span>Search</span>
               </Link>
             </Menu.Item>
           </Menu>
