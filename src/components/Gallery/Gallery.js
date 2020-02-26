@@ -100,6 +100,7 @@ const Gallery = props => {
   return (
     <React.Fragment>
       <section className="section" >
+        <hr style={{borderColor: 'white', borderStyle: 'solid'}}></hr>
         <h2 className="section__title">{`Projects`}</h2>
         <div className="gallery gallery--grid" id="portfolio">
           {items &&

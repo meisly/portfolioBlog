@@ -75,7 +75,7 @@ const Card = props => {
 
         .card {
           padding-bottom: 2.75rem;
-          padding-top: 75px;
+          padding-top: 55px;
         }
 
         .card__block--main {

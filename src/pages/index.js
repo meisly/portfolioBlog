@@ -8,7 +8,6 @@ import Seo from "../components/Seo";
 import { Card } from "antd";
 import background1 from "../images/png/hero-background.png";
 import tree from "../images/png/professional-development-tree.png";
-import longTree from "../images/png/professional-development-tree-long.png";
 import bluebg1 from "../images/jpg/option4.jpg";
 import Gallery from "../components/Gallery";
 
@@ -88,6 +87,7 @@ class IndexPage extends React.Component {
                             <div style={{height: '50px'}}></div>
                             <Gallery className="projectsContainer" theme={theme} max={3} />
                             <h2 style={{ margin: '10px auto 30px auto', width: '50%' }}>If you want to check out more of my projects head to my <Link to='/portfolio/'>portfolio page</Link>...</h2>
+                            <hr style={{margin: '5vh', borderColor: 'white', borderStyle: 'solid'}}></hr>
                             <div className='next'>
                                 <div className='nextChild'>
                                     <h2>More About Me</h2>
@@ -298,7 +298,7 @@ class IndexPage extends React.Component {
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: top left -105%;
-                        background-position: -315px 27px;
+                        background-position: -24vw 0vh;
                         }
                     @media only screen and (max-width: 780px) {
                         .next {
@@ -327,13 +327,14 @@ class IndexPage extends React.Component {
                             background-position: top left -107px;
                         }
                     }
-                    @media only screen and (min-width: 1400px) {
+
+                    @media only screen and (min-width: 1366px) {
                         .skillBlurb {
                             position: relative;
                             right: 0;
                             float: right;
                             width: 100vw;
-                            height: 85vh;
+                            height: 90vh;
                             margin: auto;
                             background-image: url(${bluebg1});
                             background-size: cover;
@@ -373,9 +374,18 @@ class IndexPage extends React.Component {
                             background-image: url(${tree});
                             background-size: contain;
                             background-repeat: no-repeat;
-                            background-position: top left -105%;
-                            background-position: -315px 27px;
+                            background-position: -20vw 27px;
                             }
+                    }
+                    @media only screen and (min-width: 1366px) and (max-height: 790px) {
+                        .skillBlurb_text {
+                            width: 34%;
+                        }
+                    }
+                    @media only screen and (min-width: 1280px) and (min-height: 800px) {
+                        .madSkillz {
+                            background-position: -24vw 3vh;
+                        }
                     }
                     @media only screen and (min-width: 1900px) {
                         .next {
@@ -397,7 +407,7 @@ class IndexPage extends React.Component {
                             width: 30%;
                             float: right;
                             margin: 20px;
-                            margin-top: 150px;
+                            margin-top: 100px;
                             // background: rgb(203, 195, 252);
                             background: rgba(88, 89, 91, 0.79);
                             color: white;
@@ -406,7 +416,7 @@ class IndexPage extends React.Component {
                             min-height: 40%;
                             padding-top: 3rem;
                             padding-bottom: 3rem;
-                            font-size: larger;
+                            font-size: xx-large;
                             box-shadow: 3px 4px 5px 0px #9ac7ce;
                             }
                         .skillBlurb h2 {
@@ -426,10 +436,20 @@ class IndexPage extends React.Component {
                             background-image: url(${tree});
                             background-size: contain;
                             background-repeat: no-repeat;
-                            background-position: top left -105%;
+                            background-position: -470px 27px;
                             }
                         
                     }
+                    @media only screen and (min-width: 2048px) and (min-height: 1440px) {
+                        .madSkillz {
+                            background-position: -25vw 15vh;
+                        }
+                        .skillBlurb_text {
+                            width: 23%;
+                            font-size: xx-large;
+                        }
+                    }
+
                 `}</style>
             </React.Fragment >
         );

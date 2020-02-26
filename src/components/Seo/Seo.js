@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import config from "../../../content/meta/config";
+import favicon16 from "../../../static/icons/favicon-16x16.png";
+import favicon96 from "../../../static/icons/favicon-96x96.png";
+import favicon32 from "../../../static/icons/favicon-32x32.png";
 
 const Seo = props => {
   const { data, facebook } = props;
@@ -21,6 +24,11 @@ const Seo = props => {
         lang: config.siteLanguage,
         prefix: "og: http://ogp.me/ns#"
       }}
+      link={[
+        { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon16}` },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon32}` },
+        { rel: "shortcut icon", type: "image/png", href: `${favicon96}` },
+      ]}
     >
       {/* General tags */}
       <title>{title}</title>
@@ -38,6 +46,7 @@ const Seo = props => {
         name="twitter:creator"
         content={config.authorTwitterAccount ? config.authorTwitterAccount : ""}
       />
+
     </Helmet>
   );
 };
