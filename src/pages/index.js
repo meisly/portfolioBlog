@@ -203,6 +203,7 @@ class IndexPage extends React.Component {
                         padding: 2rem;
                         background-color: #e6e9f0;  
                         background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+                        background-image:linear-gradient(60deg,#3d33934f 0%,#2b76b95c 37%,#3f1e4459 65%,rgba(152, 210, 102, 0) 106%);
                     }
                     .nextChild h2 {
                         text-align: center;
@@ -404,7 +405,7 @@ class IndexPage extends React.Component {
                             }
                         .skillBlurb_text {
                             border-radius: 10px;
-                            width: 30%;
+                            width: 40%;
                             float: right;
                             margin: 20px;
                             margin-top: 100px;

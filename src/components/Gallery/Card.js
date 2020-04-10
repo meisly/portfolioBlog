@@ -62,7 +62,7 @@ const Card = props => {
         }
 
         .card::before {
-          background-image: var(--gradient-1);
+          background-image: var(--gradient-2);
           border-radius: 15px;
           box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.1);
           bottom: 70px;

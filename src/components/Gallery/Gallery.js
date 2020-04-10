@@ -200,7 +200,7 @@ const Gallery = props => {
       }
 
       .gallery__item:nth-child(3n) .card::before {
-        background-image: var(--gradient-3);
+        background-image: var(--gradient-2);
       }
       
       `}</style>
