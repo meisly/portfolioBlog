@@ -100,7 +100,7 @@ const Gallery = props => {
   return (
     <React.Fragment>
       <section className="section" >
-        <hr style={{borderColor: 'white', borderStyle: 'solid'}}></hr>
+        <hr style={{borderColor: 'transparent', borderStyle: 'solid'}}></hr>
         <h2 className="section__title">{`Projects`}</h2>
         <div className="gallery gallery--grid" id="portfolio">
           {items &&
@@ -128,10 +128,10 @@ const Gallery = props => {
       </style>
       <style global jsx>{`
       :root {
-        --gradient-1: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+        --gradient-1: linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
         /*   --gradient-2: linear-gradient(214deg, #8EE2F1 0%, #CDFEDF 55%); */
-        --gradient-2: linear-gradient(315deg, #8ec5fc 0%, #e0c3fc 100%);
-        --gradient-3: linear-gradient(210deg, #74ebd5 0%, #f7e8ad 100%);
+        --gradient-2: linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
+        --gradient-3: linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
       }
 
       .card__element--user-img img,
@@ -159,6 +159,7 @@ const Gallery = props => {
 
       .section {
         padding: 40px;
+        background-color: #ebebf5;
       }
 
       .section__title {

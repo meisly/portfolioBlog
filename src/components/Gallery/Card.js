@@ -52,10 +52,10 @@ const Card = props => {
       <style jsx>{`
         :root {
           --font-family-primary: Nunito, sans-serif;
-          --gradient-1: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+          --gradient-1:  linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
           /*   --gradient-2: linear-gradient(214deg, #8EE2F1 0%, #CDFEDF 55%); */
-          --gradient-2: linear-gradient(315deg, #8ec5fc 0%, #e0c3fc 100%);
-          --gradient-3: linear-gradient(210deg, #74ebd5 0%, #f7e8ad 100%);
+          --gradient-2: linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
+          --gradient-3: linear-gradient(315deg,#bbf0fc 0%,#fdf4f7 100%);
         }
         .card {
           position: relative;

@@ -61,17 +61,19 @@ class IndexPage extends React.Component {
                 <ThemeContext.Consumer>
                     {theme => (
                         <React.Fragment theme={theme}>
-
+                            
                             <div className="skillBlurb">
+                                <span className="madSkillz">
+                                </span>
                                 <section className="skillBlurb_text">
-                                    <h2>
-                                        Always Learning
-                                    </h2>
-                                    <hr className='divider' />
+                                  
                                     <p>
-                                        I'm a full stack developer who loves building things with code. Most of my experience is with the MERN/SERN stack but I love trying new things and can pick up new skills and technologies quickly.
+                                        I'm a full stack developer who loves building things with code. 
                                     </p>
                                     <p>
+                                        Check out some of my projects below or on my <Link to='/portfolio/'>Portfolio</Link> page.
+                                    </p>
+                                    {/* <p>1
                                         <strong>Languages:</strong> JavaScript, CSS, HTML, Python, C#
                                     </p>
                                     <p>
@@ -79,16 +81,15 @@ class IndexPage extends React.Component {
                                     </p>
                                     <p>
                                         <strong>Technologies: </strong>REST API, Node.js, MySQL, Mongo, Linux
-                                    </p>
+                                    </p> */}
                                 </section>
                             </div>
-                            <div className="madSkillz">
-                            </div>
-                            <div style={{height: '50px'}}></div>
+                          
+                            <div style={{height: '50px', backgroundColor: 'rgba(0, 0, 0, 0.68)'}}></div>
                             <Gallery className="projectsContainer" theme={theme} max={3} />
-                            <h2 style={{ margin: '10px auto 30px auto', width: '50%' }}>If you want to check out more of my projects head to my <Link to='/portfolio/'>portfolio page</Link>...</h2>
+                            <h2 style={{ margin: '10px auto 30px auto', textAlign: 'center' }}>If you want to check out more of my projects head to my <Link to='/portfolio/'>portfolio page</Link>...</h2>
                             <hr style={{margin: '5vh', borderColor: 'white', borderStyle: 'solid'}}></hr>
-                            <div className='next'>
+                            {/* <div className='next'>
                                 <div className='nextChild'>
                                     <h2>More About Me</h2>
                                     <div className="nextChildInner me" dangerouslySetInnerHTML={{ __html: aboutMeHTML }}></div>
@@ -168,7 +169,7 @@ class IndexPage extends React.Component {
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                         </React.Fragment>
 
                     )}
@@ -257,7 +258,7 @@ class IndexPage extends React.Component {
                         right: 0;
                         float: right;
                         width: 100vw;
-                        height: 85vh;
+                        height: 77vh;
                         margin: auto;
                         background-image: url(${bluebg1});
                         background-size: cover;
@@ -270,7 +271,7 @@ class IndexPage extends React.Component {
                         margin: 20px;
                         margin-right: 10px;
                         // background: rgb(203, 195, 252);
-                        background: rgba(88, 89, 91, 0.79);
+                        background: rgba(38, 38, 39, 0.79);
                         color: white;
                         border-radius: 5px;
                         padding: 3rem;
@@ -292,14 +293,13 @@ class IndexPage extends React.Component {
                     }
                     .madSkillz {
                         position: absolute;
-                        top: 70%;
+                        top: 0;
                         height: 100vh;
-                        width: 95vw;
+                        width: 76vw;
                         background-image: url(${tree});
                         background-size: contain;
                         background-repeat: no-repeat;
-                        background-position: top left -105%;
-                        background-position: -24vw 0vh;
+                        background-position: -20vw 1vh;
                         }
                     @media only screen and (max-width: 780px) {
                         .next {
@@ -319,8 +319,8 @@ class IndexPage extends React.Component {
                         }
                         .madSkillz {
                             position: absolute;
-                            top: 85%;
-                            height: 100vh;
+                            top: 0%;
+                            height: 95vh;
                             width: 100vw;
                             background-image: none;
                             background-size: contain;
@@ -335,12 +335,13 @@ class IndexPage extends React.Component {
                             right: 0;
                             float: right;
                             width: 100vw;
-                            height: 90vh;
+                            height: 100vh;
                             margin: auto;
                             background-image: url(${bluebg1});
                             background-size: cover;
                             padding: 2rem;
                             }
+
                         .skillBlurb_text {
                             border-radius: 10px;
                             width: 25%;
@@ -348,7 +349,7 @@ class IndexPage extends React.Component {
                             margin: 20px;
                             margin-right: 10px;
                             // background: rgb(203, 195, 252);
-                            background: rgba(88, 89, 91, 0.79);
+                            background: rgba(38, 38, 39, 0.79);
                             color: white;
                             border-radius: 5px;
                             padding: 3rem;
@@ -369,14 +370,13 @@ class IndexPage extends React.Component {
                         }
                         .madSkillz {
                             position: absolute;
-                            top: 70%;
+                            top: 0%;
                             height: 100vh;
-                            width: 95vw;
-                            background-image: url(${tree});
-                            background-size: contain;
+                            width: 71vw;
+                            background-size: cover;
                             background-repeat: no-repeat;
-                            background-position: -20vw 27px;
-                            }
+                            background-position: -22vw 23px;
+                        }
                     }
                     @media only screen and (min-width: 1366px) and (max-height: 790px) {
                         .skillBlurb_text {
@@ -385,19 +385,44 @@ class IndexPage extends React.Component {
                     }
                     @media only screen and (min-width: 1280px) and (min-height: 800px) {
                         .madSkillz {
-                            background-position: -24vw 3vh;
+                            background-position: -16vw 3vh;
+                            width: 70vw;
                         }
+                        .skillBlurb {;
+                            width: 100vw;
+                            height: 71vh;
+                            }
+                    }         
+                    @media only screen and (min-width: 1280px) and (min-height: 900px) {
+                        .madSkillz {
+                            background-position: -20vw 3vh;
+                            width: 71vw;
+                            background-size: contain;
+                        }
+                        .skillBlurb {;
+                            width: 100vw;
+                            height: 61vh;
+                            }
+                    }
+                    @media only screen and (min-width: 1440px) and (min-height: 900px) {
+                        .madSkillz {
+                            background-position: -18vw 2vh;
+                            width: 70vw;
+                            background-size: contain;
+                        }
+                        .skillBlurb {;
+                            width: 100vw;
+                            height: 70vh;
+                            }
                     }
                     @media only screen and (min-width: 1900px) {
-                        .next {
-                            grid-template-columns: 1fr;
-                        }
+                      
                         .skillBlurb {
                             position: relative;
                             right: 0;
                             float: right;
                             width: 100vw;
-                            height: 90vh;
+                            height: 85vh;
                             margin: auto;
                             background-image: url(${bluebg1});
                             background-size: cover;
@@ -410,10 +435,10 @@ class IndexPage extends React.Component {
                             margin: 20px;
                             margin-top: 100px;
                             // background: rgb(203, 195, 252);
-                            background: rgba(88, 89, 91, 0.79);
+                            background: rgba(38, 38, 39, 0.79);
                             color: white;
                             border-radius: 5px;
-                            padding: 2rem;
+                            padding: 5rem;
                             min-height: 40%;
                             padding-top: 3rem;
                             padding-bottom: 3rem;
@@ -431,26 +456,41 @@ class IndexPage extends React.Component {
                         }
                         .madSkillz {
                             position: absolute;
-                            top: 70%;
+                            top: 0;
                             height: 100vh;
-                            width: 100vw;
+                            width: 63vw;
                             background-image: url(${tree});
-                            background-size: contain;
+                            background-size: initial;
                             background-repeat: no-repeat;
-                            background-position: -470px 27px;
+                            background-position: -24vw 6vh;
                             }
                         
                     }
+                    @media only screen and (min-width: 1900px) and (max-height: 1080px){
+                        .skillBlurb {
+                            height: 100vh;
+                        }
+                    }
                     @media only screen and (min-width: 2048px) and (min-height: 1440px) {
                         .madSkillz {
-                            background-position: -25vw 15vh;
+                            background-position: -19vw 0vh;
+                        }
+                        .skillBlurb {
+                            height: 70vh;
                         }
                         .skillBlurb_text {
-                            width: 23%;
+                            width: 33%;
                             font-size: xx-large;
                         }
                     }
-
+                    @media only screen and (min-width: 2548px) {
+                        .skillBlurb {
+                            height: 1004px;
+                        }
+                        .madSkillz {
+                            background-position: -16vw 0vh;
+                        }
+                    }
                 `}</style>
             </React.Fragment >
         );
